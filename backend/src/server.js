@@ -16,6 +16,8 @@ app.use("/api/messages", messageRoutes);
 
 const PORT = process.env.PORT || 3000;
 
+app.use(express.json());
+
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
